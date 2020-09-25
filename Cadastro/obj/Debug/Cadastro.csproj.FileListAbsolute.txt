@@ -9,3 +9,5 @@ C:\Users\paola\OneDrive\Área de Trabalho\C-Sharp W.Forms\Cadastro\Cadastro\obj\
 C:\Users\paola\OneDrive\Área de Trabalho\C-Sharp W.Forms\Cadastro\Cadastro\obj\Debug\Cadastro.exe
 C:\Users\paola\OneDrive\Área de Trabalho\C-Sharp W.Forms\Cadastro\Cadastro\obj\Debug\Cadastro.pdb
 C:\Users\paola\OneDrive\Área de Trabalho\C-Sharp W.Forms\Cadastro\Cadastro\obj\Debug\Cadastro.Cadastro.resources
+C:\Users\paola\OneDrive\Área de Trabalho\C-Sharp W.Forms\Cadastro\Cadastro\bin\Debug\Cadastros.mdf
+C:\Users\paola\OneDrive\Área de Trabalho\C-Sharp W.Forms\Cadastro\Cadastro\bin\Debug\Cadastros_log.ldf
