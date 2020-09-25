@@ -21,5 +21,12 @@ namespace Cadastro
         {
             
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Cadastro cadastro = new Cadastro();
+            cadastro.Show();
+            this.Visible = false;
+        }
     }
 }
