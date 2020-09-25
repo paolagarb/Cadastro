@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Cadastro.DAL
 {
-    class CadastrosDAOBD : ICadastroDAO
+    class CadastrosDAOBD : ICadastrosDAO
     {
         private ConexaoBD conexao;
 
