@@ -27,6 +27,7 @@ namespace Cadastro.DAL
                 cmd.Parameters.AddWithValue("@email", email);
                 cmd.Parameters.AddWithValue("@usuario", usuario);
                 cmd.Parameters.AddWithValue("@senha", senha);
+
                 cmd.ExecuteNonQuery();
                 conexao.FecharConexao();
                 return true;
@@ -66,10 +67,10 @@ namespace Cadastro.DAL
                 cmd.CommandText = "SELECT COUNT(usuario) FROM Cadastro WHERE usuario = @usuario AND senha = @senha";
                 cmd.Parameters.AddWithValue("@usuario", usuario);
                 cmd.Parameters.AddWithValue("@senha", senha);
+                
+                i = (Int32)cmd.ExecuteScalar();
 
-                i = cmd.ExecuteNonQuery();
-
-                if (i >= 1)
+                if (i != 0)
                 {
                     return true;
                 }
