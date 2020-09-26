@@ -27,7 +27,7 @@ namespace Cadastro.DAL
                 cmd.Parameters.AddWithValue("@email", email);
                 cmd.Parameters.AddWithValue("@usuario", usuario);
                 cmd.Parameters.AddWithValue("@senha", senha);
-
+                //bool cadastro = VerificarUsuario(usuario);
                 cmd.ExecuteNonQuery();
                 conexao.FecharConexao();
                 return true;
@@ -77,7 +77,28 @@ namespace Cadastro.DAL
             }
             conexao.FecharConexao();
             return false;
-
         }
+
+       /* public bool VerificarUsuario(string usuario)
+        {
+            int i = 0;
+            SqlConnection conn = conexao.AbrirConexao();
+            if (conn != null)
+            {
+
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = "SELECT COUNT(usuario) FROM Cadastro WHERE usuario = @usuario";
+                cmd.Parameters.AddWithValue("@usuario", usuario);
+
+                i = (Int32)cmd.ExecuteScalar();
+
+                if (i != 0)
+                {
+                    return true;
+                }
+            }
+            conexao.FecharConexao();
+            return false;
+        }*/
     }
 }

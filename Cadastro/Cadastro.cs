@@ -58,6 +58,15 @@ namespace Cadastro
                 {
                     cadastro.Inserir(email, usuario, senha);
                     MessageBox.Show("Cadastro realizado com sucesso!");
+                    txtUsuario.Text = "";
+                    txtSenha.Text = "";
+                    txtEmail.Text = "";
+                    txtConfirmaSenha.Text = "";
+                    
+
+                    /*Form1 login = new Form1();
+                    login.Show();
+                    this.Visible = false;*/
                 }
             } else
             {
