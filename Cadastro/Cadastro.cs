@@ -17,6 +17,7 @@ namespace Cadastro
         public Cadastro()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void label3_Click(object sender, EventArgs e)

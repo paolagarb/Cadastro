@@ -15,9 +15,12 @@ namespace Cadastro
     public partial class Form1 : Form
     {
         GerenciadorCadastros cadastro = new GerenciadorCadastros();
+
+
         public Form1()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)
@@ -52,6 +55,11 @@ namespace Cadastro
                 }
             }
             
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
         }
     }
