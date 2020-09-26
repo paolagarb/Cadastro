@@ -18,7 +18,7 @@ namespace Cadastro.DAL
             if (conexao == null)
             {
                 conexao = new SqlConnection();
-                conexao.ConnectionString = @"C:\Users\paola\OneDrive\Área de Trabalho\C-Sharp W.Forms\Cadastro\Cadastro\Cadastros.mdf";
+                conexao.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Cadastros.mdf;Integrated Security=True";
             }
         }
 

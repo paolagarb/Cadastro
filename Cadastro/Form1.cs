@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Cadastro.BLL;
+using Cadastro.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,7 @@ namespace Cadastro
 {
     public partial class Form1 : Form
     {
+        GerenciadorCadastros cadastro = new GerenciadorCadastros();
         public Form1()
         {
             InitializeComponent();
@@ -27,6 +30,29 @@ namespace Cadastro
             Cadastro cadastro = new Cadastro();
             cadastro.Show();
             this.Visible = false;
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            string usuario = txtUsuario.Text;
+            string senha = txtSenha.Text;
+
+            if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(senha))
+            {
+                MessageBox.Show("Preencha os campos!");
+            } else
+            {
+                bool validar = cadastro.ValidarUsuario(usuario, senha);
+                if (validar)
+                {
+                    MessageBox.Show("OK");
+                } else
+                {
+                    MessageBox.Show("Inválido!");
+                }
+            }
+            
+
         }
     }
 }

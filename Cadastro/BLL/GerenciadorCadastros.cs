@@ -25,5 +25,10 @@ namespace Cadastro.BLL
         {
             return Dao.Listar();
         }
+
+        public bool ValidarUsuario(string usuario, string senha)
+        {
+            return Dao.ValidarUsuario(usuario, senha);
+        }
     }
 }

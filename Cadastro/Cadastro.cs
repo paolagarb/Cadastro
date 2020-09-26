@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cadastro.BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace Cadastro
 {
     public partial class Cadastro : Form
     {
+        GerenciadorCadastros cadastro = new GerenciadorCadastros();
         public Cadastro()
         {
             InitializeComponent();
@@ -37,6 +39,29 @@ namespace Cadastro
             Form1 login = new Form1();
             login.Show();
             this.Visible = false;
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            string usuario = txtUsuario.Text;
+            string email = txtUsuario.Text;
+            string senha = txtSenha.Text;
+            string senhaConfirmar = txtConfirmaSenha.Text;
+
+            if (!(string.IsNullOrEmpty(usuario)) || !(string.IsNullOrEmpty(email)) || !(string.IsNullOrEmpty(senha)) || !(string.IsNullOrEmpty(senhaConfirmar)))
+            {
+                if (senha != senhaConfirmar)
+                {
+                    MessageBox.Show("As senhas não coincidem!");
+                } else 
+                {
+                    cadastro.Inserir(email, usuario, senha);
+                    MessageBox.Show("Cadastro realizado com sucesso!");
+                }
+            } else
+            {
+                MessageBox.Show("Preencha todos os campos!");
+            }
         }
     }
 }

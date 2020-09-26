@@ -117,10 +117,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Cadastros.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Cadastros_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Cadastros.mdf</DependentUpon>
     </Content>
   </ItemGroup>

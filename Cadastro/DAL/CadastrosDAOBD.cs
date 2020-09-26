@@ -55,5 +55,28 @@ namespace Cadastro.DAL
             return null;
         }
 
+        public bool ValidarUsuario(string usuario, string senha)
+        {
+            int i = 0;
+            SqlConnection conn = conexao.AbrirConexao();
+            if (conn != null)
+            {
+               
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = "SELECT COUNT(usuario) FROM Cadastro WHERE usuario = @usuario AND senha = @senha";
+                cmd.Parameters.AddWithValue("@usuario", usuario);
+                cmd.Parameters.AddWithValue("@senha", senha);
+
+                i = cmd.ExecuteNonQuery();
+
+                if (i >= 1)
+                {
+                    return true;
+                }
+            }
+            conexao.FecharConexao();
+            return false;
+
+        }
     }
 }

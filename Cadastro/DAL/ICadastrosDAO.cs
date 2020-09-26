@@ -10,5 +10,6 @@ namespace Cadastro.DAL
     {
         bool Inserir(string email, string usuario, string senha);
         List<string> Listar();
+        bool ValidarUsuario(string usuario, string senha);
     }
 }
