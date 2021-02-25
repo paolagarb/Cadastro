@@ -25,7 +25,7 @@
 
 <div align="center">
   
-##### Cadastro
+### Cadastro
 
 ![CADASTRO1](https://user-images.githubusercontent.com/69488783/109197285-90442580-777b-11eb-8497-1f6c1027aed3.png)
 
@@ -34,7 +34,7 @@
 
 <div align="center">
   
-##### Login
+### Login
 
 ![LOGIN](https://user-images.githubusercontent.com/69488783/109197295-920de900-777b-11eb-84c5-c006e8d1d0e1.png)
 
